@@ -23,7 +23,6 @@ MAINTAINER Dirk Lüth <info@qoopido.com>
 		apt-get install -qy memcached
 
 # add default /app directory
-	ADD app /app
 	RUN mkdir -p /app/logs/memcached
 
 # cleanup
