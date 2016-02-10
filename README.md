@@ -1,6 +1,6 @@
 # Build container #
 ```
-docker build -t qoopido/memcached .
+docker build -t qoopido/memcached:1.0.2 .
 ```
 
 # Run container manually ... #
