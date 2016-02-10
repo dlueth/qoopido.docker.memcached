@@ -18,6 +18,8 @@ MAINTAINER Dirk Lüth <info@qoopido.com>
 	
 # install packages
 	RUN apt-get update && \
+		apt-get -qy upgrade && \
+		apt-get -qy dist-upgrade && \
 		apt-get install -qy memcached
 
 # add default /app directory
