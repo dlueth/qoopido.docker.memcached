@@ -1,26 +1,25 @@
-# Build container #
+# recommended directory structure #
+Like with my other containers I encourage you to follow a unified directory structure approach to keep things simple & maintainable, e.g.:
+
 ```
-docker build -t qoopido/memcached:1.0.2 .
+project root
+  - docker_compose.yaml
+  - logs
 ```
 
-# Run container manually ... #
-```
-docker run -d -P -t -i -p 11211:11211 \
-	-v [local path to logs]:/app/logs \
-	--name memcached qoopido/memcached
-```
-
-# ... or use docker-compose #
+# Example docker_compose.yaml #
 ```
 memcached:
-  image: qoopido/memcached
+  image: qoopido/memcached:latest
   ports:
    - "11211:11211"
   volumes:
    - ./logs:/app/logs
 ```
 
-# Open shell #
+# Or start container manually #
 ```
-docker exec -i -t "memcached" /bin/bash
+docker run -d -P -t -i -p 11211:11211 \
+	-v [local path to logs]:/app/logs \
+	--name memcached qoopido/memcached:latest
 ```
