@@ -7,7 +7,7 @@ project root
   - logs
 ```
 
-# Example docker_compose.yaml #
+# Example docker-compose.yaml #
 ```
 memcached:
   image: qoopido/memcached:latest
