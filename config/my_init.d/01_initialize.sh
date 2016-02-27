@@ -1,3 +1,10 @@
 #!/bin/bash
 
+UP="/app/config/up.sh"
+
 mkdir -p /app/data/logs
+
+if [ -f $UP ]
+then
+	 chmod +x $UP && chmod 755 $UP && eval $UP;
+fi

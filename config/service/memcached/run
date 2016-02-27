@@ -1,3 +1,17 @@
 #!/bin/bash
 
+down()
+{
+	local DOWN="/app/config/down.sh"
+
+	if [ -f $DOWN ]
+    then
+    	 chmod +x $DOWN && chmod 755 $DOWN && eval $DOWN;
+    fi
+
+    exit
+}
+
+trap down SIGTERM
+
 exec /usr/bin/memcached start -u memcache > /dev/null 2>&1

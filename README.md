@@ -25,3 +25,6 @@ docker run -d -P -t -i -p 11211:11211 \
 	-v [local path to data]:/app/data \
 	--name memcached qoopido/memcached:latest
 ```
+
+# Configuration #
+If you need a custom shell script to be run on start or stop (e.g. to set symlinks) you can do so by creating the file ```/app/config/up.sh``` or ```/app/config/down.sh```.
