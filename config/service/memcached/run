@@ -6,7 +6,8 @@ down()
 
 	if [ -f $DOWN ]
     then
-    	 chmod +x $DOWN && chmod 755 $DOWN && eval $DOWN;
+    	echo "    Running shutdown script /app/config/down.sh"
+		chmod +x $DOWN && chmod 755 $DOWN && eval $DOWN;
     fi
 
     exit
