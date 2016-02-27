@@ -15,4 +15,4 @@ down()
 
 trap down SIGTERM
 
-exec /usr/bin/memcached start -u memcache > /dev/null 2>&1
+exec /usr/bin/memcached start -u memcache > /dev/null 2>&1 & wait
