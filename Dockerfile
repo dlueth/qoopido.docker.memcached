@@ -23,12 +23,12 @@ MAINTAINER Dirk Lüth <info@qoopido.com>
 		apt-get install -qy memcached
 
 # add default /app directory
-	RUN mkdir -p /app/logs/memcached
+	RUN mkdir -p /app/data/logs
 
 # cleanup
 	RUN apt-get clean && \
 		rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /configure.sh
 
 # finalize
-	VOLUME ["/app/logs"]
+	VOLUME ["/app/data"]
 	EXPOSE 11211

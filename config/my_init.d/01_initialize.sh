@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mkdir -p /app/logs/memcached
+mkdir -p /app/data/logs
